@@ -68,7 +68,7 @@ class UFlagEngine:
                 pr_in_lst.append(self.icd9to10pr_map.get(icd9, icd9))
         else:
             pr_in_lst = pr_lst
-        return self._get_drg(rev_lst, pr_in_lst)
+        return self._get_uflag(rev_lst, pr_in_lst)
 
 
 
