@@ -16,6 +16,8 @@ class CCSEngine:
         elif mode == "pr-cpt":
             fn = "data/cpt2ccs.json"
             self.x2ccs = utils.read_cpt2ccs(fn)
+            self.icd9to10 = utils.read_icd9to10_diagnosis("data/icd9to10_diagnosis.txt", "data/masterb10.csv") \
+                .update(utils.read_icd9to10_procedure("data/icd9toicd10pcsgem.csv"))
 
     def _get_ccs(self, x_lst):
         """

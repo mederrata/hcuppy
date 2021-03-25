@@ -230,9 +230,9 @@ def read_icd9to10_diagnosis(fn, fn_new_zealand=None):
             icd9map[row[0].replace(".", "")] = row[1].replace(".", "")
     if fn_new_zealand is not None:
         d = read_icd9to10_new_zealand(fn_new_zealand)
-    for k in d.keys():
-        if k not in icd9map:
-            icd9map[k] = d[k]
+        for k in d.keys():
+            if k not in icd9map:
+                icd9map[k] = d[k]
     return icd9map
 
 def read_icd9to10_procedure(fn, fn_new_zealand=None):
@@ -245,7 +245,7 @@ def read_icd9to10_procedure(fn, fn_new_zealand=None):
             icd9map[row[0]] = row[1]
     if fn_new_zealand is not None:
         d = read_icd9to10_new_zealand(fn_new_zealand)
-    for k in d.keys():
-        if k not in icd9map:
-            icd9map[k] = d[k]
+        for k in d.keys():
+            if k not in icd9map:
+                icd9map[k] = d[k]
     return icd9map
